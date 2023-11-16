@@ -1,2 +1,14 @@
-package PACKAGE_NAME;public class Admin {
+public class Admin extends User{
+
+    public Admin(String name, String surname, String username, String password)
+    {
+        super(name, surname, username, password);
+    }
+
+    public void registerMovie()
+    {
+
+    }
+
+
 }

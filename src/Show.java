@@ -3,27 +3,39 @@ import java.util.ArrayList;
 
 public class Show extends Production{
 
-    ArrayList<Series> relatedSeries;
+    ArrayList<Show> relatedShows;
     ArrayList<Season> seasons;
 
-    public Series(String title, String description, boolean isAppropriate, String category, String mainCharacters, ArrayList<Season> seasons)
-    {
-        super(title, description, isAppropriate, category, mainCharacters);
+
+    public Show(String title, String description, boolean isAppropriate, String genre, String mainCharacters) {
+        super(title, description, isAppropriate, genre, mainCharacters);
+        this.relatedShows = new ArrayList<>();
         this.seasons = new ArrayList<>();
-        this.seasons = seasons;
     }
 
-    public Series(String title, String description, boolean isAppropriate, String category, String mainCharacters, ArrayList<Season> seasons, ArrayList<Series> relatedShows) {
-        super(title, description, isAppropriate, category, mainCharacters);
-        relatedSeries = new ArrayList<>();
-        this.relatedSeries = relatedShows;
-        this.seasons = new ArrayList<>();
-        this.seasons = seasons;
+    public void addRelatedShows(ArrayList<Show> shows)
+    {
+        relatedShows = shows;
     }
 
     public void addSeason(Season season)
     {
-        seasons.add(season);
+        if(!seasons.contains(season))
+            seasons.add(season);
+    }
+
+    public Season getSeason(int numberOfSeason)
+    {
+        if(numberOfSeason>0 && numberOfSeason<=seasons.size())
+            for(Season s: seasons)
+            {
+                if(s.getNumberOfSeason()==numberOfSeason)
+                {
+                    return s;
+                }
+
+            }
+        return null;
     }
 
 }
