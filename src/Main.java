@@ -8,7 +8,8 @@ public class Main {
         data.showGenres();
         Scanner sc = new Scanner(System.in);
         String genre = sc.nextLine();
-        data.addShow("Friends","Five friends sit in a house all day and make out with each other",true,genre,"Ross Blacker");
+        Show show = new Show("Friends","Five friends sit in a house all day and make out with each other",true,genre,"Ross Blacker");
+        data.addShow(show);
         sc.close();
     }
 }

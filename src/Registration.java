@@ -2,10 +2,20 @@ import java.util.ArrayList;
 
 public class Registration {
 
-    private final String name, surname, username, password;
+    private final String name, lastName, username, password;
 
-    public Registration(ArrayList<User> users, String name, String surname, String username, String password)
+    public Registration()
     {
-        for
+        name="";
+        lastName="";
+        username="";
+        password="";
+    }
+
+    public void registerUser(String name, String lastName, String username, String password)
+    {
+        User user = new User(name, lastName, username, password);
     }
 }
+
+

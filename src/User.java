@@ -2,12 +2,12 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class User {
-    private final String name, surname, username, password;
+    private final String name, lastName, username, password;
 
-    public User(String name, String surname, String username, String password)
+    public User(String name, String lastName, String username, String password)
     {
         this.name = name;
-        this.surname = surname;
+        this.lastName = lastName;
         this.username = username;
         this.password = password;
     }
@@ -24,8 +24,8 @@ public class User {
         return username;
     }
 
-    public String getSurname() {
-        return surname;
+    public String getLastName() {
+        return lastName;
     }
 
 

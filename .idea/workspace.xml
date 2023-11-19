@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Rating.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Registration.java" afterDir="false" />
+    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="Changes on some classes, added Rating and Registration classes">
+      <change afterPath="$PROJECT_DIR$/src/GUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/GUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Ideas" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Registration.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegistrationGUI.form" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RegistrationGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration (1).png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/registration.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Episode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Production.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Production.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Season.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subscriber.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Subscriber.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Rating.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Rating.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Registration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,11 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\gania\IdeaProjects\PROJECT\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -69,6 +75,14 @@
       <option name="presentableId" value="Default" />
       <updated>1699919600632</updated>
     </task>
+    <task id="LOCAL-00001" summary="Changes on some classes, added Rating and Registration classes">
+      <created>1700094832108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700094832108</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -87,5 +101,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes on some classes, added Rating and Registration classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes on some classes, added Rating and Registration classes" />
   </component>
 </project>

@@ -1,7 +1,8 @@
 public class Rating {
 
     private int rating;
-    private String comment, username;
+    private String comment;
+    private final String username;
 
     public Rating(String username, String comment, int rating)
     {
@@ -20,5 +21,11 @@ public class Rating {
 
     public String getComment() {
         return comment;
+    }
+
+    public void editRating(String comment, int rating)
+    {
+        this.comment=comment;
+        this.rating= rating;
     }
 }

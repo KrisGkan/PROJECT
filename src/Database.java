@@ -5,56 +5,36 @@ public class Database {
 
     ArrayList<Movie> movies;
     ArrayList<Show> shows;
-    ArrayList<User> users;
-    ArrayList<String> genreList = new ArrayList<>();
+    ArrayList<Subscriber> subscribers;
+    ArrayList<Admin> admins;
+    ArrayList<String> genreList ;
     public Database()
     {
         movies = new ArrayList<>();
         shows = new ArrayList<>();
-        users = new ArrayList<>();
+        subscribers = new ArrayList<>();
+        admins = new ArrayList<>();
         initializeGenreList();
     }
 
-    public void addMovie(String title, String description, boolean isAppropriate, int dateOfRelease, int duration, String genre, String mainCharacters)
+    public void addMovie(Movie movie)
     {
-        Movie movie = new Movie(title,description, isAppropriate, dateOfRelease, duration, genre, mainCharacters);
-        ArrayList<Movie> relatedMovies = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-
-        for (Movie m: movies) {
-            System.out.println(movie.getTitle());
-            String option = sc.nextLine();
-            if(option.equalsIgnoreCase("yes"))
-                relatedMovies.add(m);
-        }
-
-        sc.close();
-        movie.addRelatedMovies(relatedMovies);
         movies.add(movie);
     }
 
-    public void addShow(String title, String description, boolean isAppropriate, String genre, String mainCharacters)
+    public void addShow(Show show)
     {
-        Show show = new Show(title, description, isAppropriate, genre, mainCharacters);
-        ArrayList<Show> relatedShow = new ArrayList<>();
-        Scanner sc = new Scanner(System.in);
-
-
-        for(Show s: shows) {
-            System.out.println(show.getTitle());
-            String option = sc.nextLine();
-            if (option.equalsIgnoreCase("yes"))
-                relatedShow.add(s);
-        }
-
-        sc.close();
-        show.addRelatedShows(relatedShow);
         shows.add(show);
+    }
 
+    public void addSubscriber(Subscriber subscriber)
+    {
+        subscribers.add(subscriber);
     }
 
     private void initializeGenreList()
     {
+        genreList= new ArrayList<>();
         genreList.add("Horror");
         genreList.add("Drama");
         genreList.add("Sci-Fi");
@@ -71,16 +51,22 @@ public class Database {
         }
     }
 
-    public void addUser()
-    {
 
+
+    public ArrayList<Production> search()
+    {
+        ArrayList<Production> results = new ArrayList<>();
+        results.addAll(movies);
+        results.addAll(shows);
+
+        return results;
     }
 
 
-
-    public ArrayList<Production> searchMovies(String title, String type, String cast, boolean isAppropriate, String genre, int leastRating)
+    public ArrayList<Production> search(String title, String type, String cast, boolean isAppropriate, String genre, int leastRating)
     {
         ArrayList<Production> searchResults = new ArrayList<>();
+
 
         if(type.equalsIgnoreCase("movie"))
         {
@@ -110,4 +96,11 @@ public class Database {
     }
 
 
+    public ArrayList<Movie> getMovies() {
+        return movies;
+    }
+
+    public ArrayList<Show> getShows() {
+        return shows;
+    }
 }

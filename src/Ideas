@@ -1,0 +1,54 @@
+/*for User addition:
+        ArrayList<User> users = new ArrayList<>();
+        users.addAll(subscribers);
+        users.addAll(admins);
+
+        for(User user: users)
+        {
+            if(user.getUsername().equals(username))
+            {
+                System.out.println("Username:" + username +" is already taken!");
+                break;
+            }
+        }
+        //While loop until name is valid
+        Subscriber subscriber = new Subscriber(name, surname, username, password);
+*/
+
+
+/*for Movie addition:
+
+        Movie movie = new Movie(title,description, isAppropriate, dateOfRelease, duration, genre, mainCharacters);
+        ArrayList<Movie> relatedMovies = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+        for (Movie m: movies) {
+            System.out.println(movie.getTitle());
+            String option = sc.nextLine();
+            if(option.equalsIgnoreCase("yes"))
+                relatedMovies.add(m);
+        }
+
+        sc.close();
+        movie.addRelatedMovies(relatedMovies);
+*/
+
+
+
+/*for Show addition:
+
+        Show show = new Show(title, description, isAppropriate, genre, mainCharacters);
+        ArrayList<Show> relatedShow = new ArrayList<>();
+        Scanner sc = new Scanner(System.in);
+
+
+        for(Show s: shows) {
+            System.out.println(show.getTitle());
+            String option = sc.nextLine();
+            if (option.equalsIgnoreCase("yes"))
+                relatedShow.add(s);
+        }
+
+        sc.close();
+        show.addRelatedShows(relatedShow);
+*/
