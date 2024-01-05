@@ -18,6 +18,10 @@ public class Database {
         movies = new ArrayList<>();
         shows = new ArrayList<>();
         people = new ArrayList<>();
+        movies = readListFromFile("Movies.ser");
+        shows = readListFromFile("Shows.ser");
+        people = readListFromFile("People.ser");
+        Login = readMapFromFile("LoginCredentials.ser");
         initializeGenreList();
     }
 
@@ -31,6 +35,7 @@ public class Database {
     {
         movies.add(movie);
     }
+
 
     public void addShow(Show show)
     {

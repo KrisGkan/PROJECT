@@ -4,33 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="Changes on some classes, added Rating and Registration classes">
-      <change afterPath="$PROJECT_DIR$/src/SetUp/SetUp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/Review.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="w commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Admin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Episode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Episode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/GUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Production.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Production.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Rating.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Registration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Registration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegistrationGUI.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RegistrationGUI.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Season.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Show.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Subscriber.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registration (1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registration.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Database.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +49,20 @@
       <recent name="C:\Users\gania\IdeaProjects\PROJECT\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SetUp.SetUp">
+  <component name="RunManager" selected="Application.Login">
+    <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="gui.Login" />
+      <module name="PROJECT" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="gui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="PROJECT" />
@@ -108,6 +98,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Login" />
         <item itemvalue="Application.SetUp.SetUp" />
         <item itemvalue="Application.SetUp" />
         <item itemvalue="Application.Main" />
@@ -130,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700094832108</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="w commit">
+      <option name="closed" value="true" />
+      <created>1704456972896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1704456972896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -152,6 +151,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Changes on some classes, added Rating and Registration classes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes on some classes, added Rating and Registration classes" />
+    <MESSAGE value="w commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="w commit" />
   </component>
 </project>
