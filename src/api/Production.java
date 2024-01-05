@@ -1,11 +1,12 @@
+package api;
+
+import java.io.Serializable;
 import java.util.ArrayList;
+public class Production implements Serializable {
 
-public class Production {
-
-    private final String title, description, cast, genre;
+    private final String title, description, genre, cast;
     private final boolean isAppropriate;
-    private ArrayList<String> comments;
-    private ArrayList<Rating> ratings;
+    private ArrayList<Review> reviews;
 
     private double rating;
 
@@ -18,8 +19,7 @@ public class Production {
         this.isAppropriate = isAppropriate;
         this.genre = genre;
         this.cast = cast;
-        this.comments= new ArrayList<>();
-        this.ratings= new ArrayList<>();
+        this.reviews= new ArrayList<>();
         rating = 0;
     }
 
@@ -50,12 +50,15 @@ public class Production {
         return cast;
     }
 
-    public void addRating(String username, String comment, int rating)
-    {
-        Rating rate = new Rating(username, comment, rating);
-        ratings.add(rate);
-        this.rating= (this.rating+rating)/ratings.size();
+    public void addReview(Review r) {reviews.add(r);}
 
+    public double averageScore(){
+        double sum=0.0;
+        for(Review a:reviews){
+            sum+=a.getScore();
+        }
+        if(reviews.size()!=0)return sum/reviews.size();
+        else return 0.0;
     }
 
     public double getRating()

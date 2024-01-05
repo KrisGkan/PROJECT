@@ -1,4 +1,8 @@
-public class Episode
+package api;
+
+import java.io.Serializable;
+
+public class Episode implements Serializable
 {
     private int numberOfEpisode,duration;
 

@@ -1,4 +1,6 @@
-public class Admin extends User{
+package api;
+
+public class Admin extends Person{
 
     public Admin(String name, String surname, String username, String password)
     {
@@ -7,6 +9,10 @@ public class Admin extends User{
 
     public void registerMovie()
     {
+
+    }
+
+    public void registerShow(){
 
     }
 

@@ -1,5 +1,8 @@
+package api;
+
+import java.io.Serializable;
 import java.util.ArrayList;
-public class Season {
+public class Season implements Serializable {
 
     private int numberOfSeason, dateOfRelease;
 

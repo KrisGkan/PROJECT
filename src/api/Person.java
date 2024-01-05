@@ -1,10 +1,13 @@
+package api;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class User {
+public class Person implements Serializable {
     private final String name, lastName, username, password;
 
-    public User(String name, String lastName, String username, String password)
+    public Person(String name, String lastName, String username, String password)
     {
         this.name = name;
         this.lastName = lastName;
@@ -31,3 +34,4 @@ public class User {
 
 
 }
+
