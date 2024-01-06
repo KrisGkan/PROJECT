@@ -130,6 +130,17 @@ public class Database {
         return null;
     }
 
+    public Person login(String username, String password){
+        for (Person a : people) {
+            if (a.getUsername().equals(username)) {
+                if (a.getPassword().equals(password)) {
+                    return a;
+                }
+            }
+        }
+        return null;
+    }
+
     public void showGenres()
     {
         for(String g: genreList)
