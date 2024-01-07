@@ -15,15 +15,15 @@ public class Show extends Production{
         this.seasons = new ArrayList<>();
     }
 
-    /*public void addRelatedShows(ArrayList<Show> shows)
-    {
-        relatedShows = shows;
-    }*/
 
     public void addSeason(Season season)
     {
         if(!seasons.contains(season))
             seasons.add(season);
+    }
+
+    public void deleteSeason(Season season){
+        seasons.remove(season);
     }
 
     public Season getSeason(int numberOfSeason)

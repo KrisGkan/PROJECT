@@ -7,14 +7,4 @@ public class Admin extends Person{
         super(name, surname, username, password);
     }
 
-    public void registerMovie()
-    {
-
-    }
-
-    public void registerShow(){
-
-    }
-
-
 }

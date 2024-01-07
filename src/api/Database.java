@@ -83,6 +83,20 @@ public class Database {
         }
     }
 
+    public Person register(String name,String surname, String username,String password) {
+        //username already exists
+        if (Login.containsKey(username)) {
+            return null;
+        }
+
+
+            User newPerson = new User(name, surname, username, password);
+            Login.put(username, password);
+            people.add(newPerson);
+            return newPerson;
+
+    }
+
     public void writeMapToFile(String path, HashMap map){
         try(ObjectOutputStream obj=new ObjectOutputStream(new FileOutputStream(path));){
             obj.writeObject(map);

@@ -4,18 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="sth more">
-      <change afterPath="$PROJECT_DIR$/src/api/AdminSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/UserSystem.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/AdminMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/EditMovies.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/EditShows.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/Register.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/UserMenu.java" afterDir="false" />
+    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="more and more">
+      <change afterPath="$PROJECT_DIR$/src/gui/RegisterMovies.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/gui/RegisterShows.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Admin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Admin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/AdminSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/AdminSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Season.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/UserSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserSystem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/AdminMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/AdminMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/EditMovies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditMovies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/EditShows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditShows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Register.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Search.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +59,7 @@
       <recent name="C:\Users\gania\IdeaProjects\PROJECT\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SetUp.SetUp">
+  <component name="RunManager" selected="Application.Login">
     <configuration name="Login" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.Login" />
       <module name="PROJECT" />
@@ -106,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SetUp.SetUp" />
         <item itemvalue="Application.Login" />
+        <item itemvalue="Application.SetUp.SetUp" />
         <item itemvalue="Application.SetUp" />
         <item itemvalue="Application.Main" />
       </list>
@@ -145,7 +147,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704457730029</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="more and more">
+      <option name="closed" value="true" />
+      <created>1704565236695</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704565236695</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -169,6 +179,7 @@
     <MESSAGE value="Changes on some classes, added Rating and Registration classes" />
     <MESSAGE value="w commit" />
     <MESSAGE value="sth more" />
-    <option name="LAST_COMMIT_MESSAGE" value="sth more" />
+    <MESSAGE value="more and more" />
+    <option name="LAST_COMMIT_MESSAGE" value="more and more" />
   </component>
 </project>

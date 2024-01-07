@@ -5,11 +5,15 @@ import api.AdminSystem;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class AdminMenu extends JFrame {
 
     AdminSystem adminSystem;
     Admin admin;
+    private static JButton newM;
+    private static JButton newS;
     private static JButton editM;
     private static JButton editS;
     private static JButton search;
@@ -19,6 +23,9 @@ public class AdminMenu extends JFrame {
        this.adminSystem = adminSystem;
     }
 
+    public void closeButton(){
+        this.setVisible(false);
+    }
     public void makeAdminMenu(){
       setTitle("Admin options");
       setLocationRelativeTo(null);
@@ -31,6 +38,10 @@ public class AdminMenu extends JFrame {
       GridLayout layout = new GridLayout(4,1);
       panel.setLayout(layout);
 
+      newM = new JButton("Add a movie");
+      panel.add(newM);
+      newS = new JButton("Add a show");
+      panel.add(newS);
       editM = new JButton("Edit Movies");
       panel.add(editM);
       editS = new JButton("Edit Shows");
@@ -39,6 +50,55 @@ public class AdminMenu extends JFrame {
       panel.add(search);
       logout = new JButton("Logout");
       panel.add(logout);
+
+      newM.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              RegisterMovies rm = new RegisterMovies(adminSystem);
+              rm.NewMovie();
+          }
+      });
+
+      newS.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              RegisterShows rs = new RegisterShows(adminSystem);
+              rs.NewShow();
+          }
+      });
+
+      editM.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              EditMovies em = new EditMovies(adminSystem);
+              em.makeMovies();
+          }
+      });
+
+
+      editS.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+            EditShows es = new EditShows(adminSystem);
+            es.makeShows();
+          }
+      });
+
+        logout.addActionListener(new ActionListener(){
+            @Override
+            public void actionPerformed(ActionEvent e) {closeButton();
+            }
+        });
+
+        ActionListener listener = new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              Search s = new Search(adminSystem.getDB());
+              s.makeSearch();
+            }
+        };
+
+        search.addActionListener(listener);
 
       add(panel,BorderLayout.CENTER);
       setVisible(true);
