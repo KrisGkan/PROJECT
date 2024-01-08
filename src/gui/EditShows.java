@@ -7,11 +7,15 @@ import javax.swing.*;
 
 public class EditShows extends JFrame {
 
-    public EditShows(Show show, AdminSystem adminSystem){
+    AdminSystem adminSystem;
+    Show show;
 
+    public EditShows(Show show, AdminSystem adminSystem){
+      this.show=show;
+      this.adminSystem=adminSystem;
     }
 
     public void makeS(){
-
+      
     }
 }

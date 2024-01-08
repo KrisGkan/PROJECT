@@ -35,12 +35,15 @@ public class Database {
     {
         movies.add(movie);
     }
+    public void deleteMovie(Movie movie){movies.remove(movie);}
 
 
     public void addShow(Show show)
     {
         shows.add(show);
     }
+
+    public void deleteShow(Show show){shows.remove(show);}
 
     public void addPerson(Person p){
         people.add(p);

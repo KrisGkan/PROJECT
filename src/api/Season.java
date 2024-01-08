@@ -30,6 +30,7 @@ public class Season implements Serializable {
     public int getDateOfRelease() {
         return dateOfRelease;
     }
+    public ArrayList<Episode> getEpisodes(){return episodes;}
 
     public void addEpisode(Episode episode)
     {

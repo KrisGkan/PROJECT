@@ -125,10 +125,6 @@ public class Productions extends JFrame {
             }
         }
         if(k==0){emptyLabel();}
-        /*totalReviews=new JLabel("Total reviews: "+provider.getTotalReviews());
-        totalAvgScore=new JLabel("Average score: "+provider.getAverageScore());
-        panel2.add(totalReviews);
-        panel2.add(totalAvgScore);*/
 
         //make close button and add on panel2
         closePageButton=new JButton("back");

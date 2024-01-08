@@ -1,9 +1,6 @@
-/*package gui;
+package gui;
 
-import api.AdminSystem;
-import api.Movie;
-import api.Production;
-import api.Review;
+import api.*;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -16,6 +13,7 @@ public class Reviews extends JFrame {
 
 
     AdminSystem adminSystem;
+    UserSystem userSystem;
     Production production;
     private static JLabel name;
     private static JLabel type;
@@ -32,13 +30,25 @@ public class Reviews extends JFrame {
     private static JLabel firstName;
     private static JLabel text;
     private static JLabel score;
-    private static JLabel date;
     private static JPanel panel;
     private static JPanel panel2;
     private static JLabel empty;
     public Reviews(Production production, AdminSystem adminSystem){
       this.adminSystem = adminSystem;
       this.production = production;
+    }
+
+    public Reviews(Production production, UserSystem userSystem){
+        this.production = production;
+        this.userSystem = userSystem;
+    }
+    public void emptyLabel(){
+        empty=new JLabel("You have no reviews");
+        panel2.add(empty);
+    }
+
+    public void closeButton(){
+        setVisible(false);
     }
 
     public void makeR(){
@@ -69,8 +79,8 @@ public class Reviews extends JFrame {
         panel.add(name);
         panel.add(kind);
         panel.add(description);
-        /*facilities2=new JLabel("Facilities: ");
-        panel.add(facilities2);*/
+        facilities2=new JLabel("Facilities: ");
+        /*panel.add(facilities2);
         if(a.getFacilities()!=null) {
             ArrayList<String> fac = new ArrayList<>();
             fac = a.getFacilities().listOfSelectedFacilities();
@@ -83,7 +93,7 @@ public class Reviews extends JFrame {
                 facilities = new JLabel("None");
                 panel.add(facilities);
             }
-        }
+        }*/
         numOfReviews=new JLabel("Number of reviews: "+String.valueOf(production.getReviews().size()));
         avgScore=new JLabel("Avg score: "+String.valueOf(production.averageScore()));
         panel.add(numOfReviews);
@@ -91,15 +101,21 @@ public class Reviews extends JFrame {
 
 
         //for providers
-        /*if(userSystem==null) {
+        if(userSystem==null) {
             //add edit button
             edit = new JButton("edit");
             panel.add(edit);
             edit.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    EditAccommodation ea = new EditAccommodation(a, providerSystem);
-                    ea.makeEdit();
+                    if (production instanceof Movie) {
+                        EditMovies em = new EditMovies((Movie)production, adminSystem);
+                        em.makeMo();
+                    }
+                    else{
+                        EditShows es = new EditShows((Show)production, adminSystem);
+                        es.makeS();
+                    }
                 }
             });
             //add delete button
@@ -108,27 +124,28 @@ public class Reviews extends JFrame {
             delete.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    providerSystem.deleteAccommodation(a);
+                    if(production instanceof Movie)
+                        adminSystem.getDB().deleteMovie((Movie)production);
+                    else adminSystem.getDB().deleteShow((Show)production);
                     closeButton();
                 }
             });
             //make labels for reviews
-            for(Review r:a.getListOfReviews()){
-                firstName=new JLabel("* "+r.getFirstName()+": ");
+            for(Review r:production.getReviews()){
+                User user = r.getUser();
+                firstName=new JLabel("* "+user.getName()+": ");
                 text=new JLabel("   "+r.getText());
                 score=new JLabel("   Score: "+r.getScore());
-                date=new JLabel("   Date: "+r.getDate());
                 panel2.add(firstName);
                 panel2.add(text);
                 panel2.add(score);
-                panel2.add(date);
             }
             //if there is no review
-            if(a.getListOfReviews().size()==0)emptyLabel();
-        }*/
+            if(production.getReviews().size()==0)emptyLabel();
+        }
 
         //for users
-        if(providerSystem==null){
+       /* if(adminSystem==null){
             //add review button if user has not already made a review
             if(!userSystem.getUser().getMyReviewed().contains(a)) {
                 review = new JButton("review");
@@ -175,7 +192,7 @@ public class Reviews extends JFrame {
             }
             //if there is no review
             if(a.getListOfReviews().size()==0)emptyLabel();
-        }
+        }*/
 
         //add close button
         close=new JButton("back");
@@ -189,11 +206,11 @@ public class Reviews extends JFrame {
         add(panel);
 
         //add panel2 to frame
-        panel2.setLayout(new GridLayout(a.getListOfReviews().size()*4,1));
+        panel2.setLayout(new GridLayout(production.getReviews().size()*4,1));
         panel2.setBorder(border2);
         add(panel2, BorderLayout.PAGE_END);
 
         pack();
         setVisible(true);
     }
-}*/
+}

@@ -7,7 +7,7 @@ public class Movie extends Production {
 
 
 
-    private final int dateOfRelease, duration;
+    private int dateOfRelease, duration;
 
     public Movie(String title, String description, boolean isAppropriate, int dateOfRelease, int duration, String genre, String mainCharacters)
     {
@@ -16,6 +16,8 @@ public class Movie extends Production {
         this.duration=duration;
     }
 
+    public void setDateOfRelease(int d) {dateOfRelease=d;}
+
 
 
 
@@ -23,8 +25,7 @@ public class Movie extends Production {
         return dateOfRelease;
     }
 
-
-
+    public void setDuration(int d){duration=d;}
     public int getDuration()
     {
         return duration;

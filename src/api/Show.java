@@ -14,6 +14,7 @@ public class Show extends Production{
         this.seasons = new ArrayList<>();
     }
 
+    public ArrayList<Season> getSeasons(){return seasons;}
 
     public void addSeason(Season season)
     {

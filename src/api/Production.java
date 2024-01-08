@@ -4,8 +4,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 public class Production implements Serializable {
 
-    private final String title, description, genre, cast;
-    private final boolean isAppropriate;
+    private String title, description, genre, cast;
+    private boolean isAppropriate;
     private ArrayList<Review> reviews;
 
     private double rating;
@@ -29,26 +29,31 @@ public class Production implements Serializable {
     {
         return title;
     }
+    public void setTitle(String t) {title=t;}
 
     public String getDescription()
     {
         return description;
     }
+    public void setDescription(String d) {description = d;}
 
     public boolean getAppropriation()
     {
         return isAppropriate;
     }
+    public void setAppropriation(boolean ap){isAppropriate=ap;}
 
 
     public String getGenre()
     {
         return genre;
     }
+    public void setGenre(String g) {genre = g;}
 
     public String getCast() {
         return cast;
     }
+    public void setCast(String c) {cast = c;}
 
     public void addReview(Review r) {reviews.add(r);}
 

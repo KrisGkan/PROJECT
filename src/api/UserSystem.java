@@ -5,7 +5,14 @@ package api;
  */
 public class UserSystem {
 
+    User user;
+    Database database;
     public UserSystem(User user, Database database){
+      this.user = user;
+      this.database = database;
+    }
 
+    public User getUser(){
+        return user;
     }
 }
