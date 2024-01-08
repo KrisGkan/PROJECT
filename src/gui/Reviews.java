@@ -1,4 +1,4 @@
-package gui;
+/*package gui;
 
 import api.AdminSystem;
 import api.Movie;
@@ -196,4 +196,4 @@ public class Reviews extends JFrame {
         pack();
         setVisible(true);
     }
-}
+}*/
