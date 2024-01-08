@@ -14,12 +14,26 @@ public class Show extends Production{
         this.seasons = new ArrayList<>();
     }
 
+    public void deleteLastSeason(){
+        int a = seasons.size()-1;
+        seasons.remove(a);
+    }
+
     public ArrayList<Season> getSeasons(){return seasons;}
 
     public void addSeason(Season season)
     {
         if(!seasons.contains(season))
             seasons.add(season);
+    }
+
+    public String sdetails(){
+        int a = seasons.size();
+        String b = String.valueOf(a);
+        if (a>0)
+            if(a>1)
+                return b.concat(" Seasons");
+            return b.concat(" Season");
     }
 
     public void deleteSeason(Season season){

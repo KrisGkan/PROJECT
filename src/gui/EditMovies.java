@@ -98,6 +98,7 @@ public class EditMovies extends JFrame {
       add(actorsLabel);
       add(actorsField);
       add(submitButton);
+
       titleField.setText(movie.getTitle());
       descriptionArea.setText(movie.getDescription());
       yearField.setText(String.valueOf(movie.getDateOfRelease()));

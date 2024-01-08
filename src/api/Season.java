@@ -37,6 +37,11 @@ public class Season implements Serializable {
         episodes.add(episode);
     }
 
+    public void deleteLastEpisode(){
+        int a = episodes.size()-1;
+        episodes.remove(a);
+    }
+
     public void deleteEpisode(Episode episode){episodes.remove(episode);}
 
     public Episode getEpisode(int numberOfEpisode)

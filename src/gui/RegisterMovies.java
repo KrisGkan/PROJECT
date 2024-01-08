@@ -124,7 +124,6 @@ public class RegisterMovies extends JFrame {
                 else{
                    Movie m = new Movie(title, descr, suitable, year, duration, kind, actors);
                    adminSystem.getDB().addMovie(m);
-                   approve();
                    closeButton();
                 }
             }

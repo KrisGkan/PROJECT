@@ -4,18 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="more and more and moreand moree">
+    <list default="true" id="7c49b6e3-5575-4a86-bce7-c519ae23ebae" name="Changes" comment="more and more and moreand moreeeee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/Production.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Production.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/Season.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Season.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/Show.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/api/UserSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/UserSystem.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/EditMovies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditMovies.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/EditShows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/EditShows.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Login.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Productions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Productions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegisterMovies.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegisterMovies.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/RegisterShows.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/RegisterShows.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/gui/Reviews.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/Reviews.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/UserMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/UserMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,7 +178,15 @@
       <option name="project" value="LOCAL" />
       <updated>1704720647178</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="more and more and moreand moreeeee">
+      <option name="closed" value="true" />
+      <created>1704728764783</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704728764783</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -204,6 +213,7 @@
     <MESSAGE value="more and more" />
     <MESSAGE value="more and more and more" />
     <MESSAGE value="more and more and moreand moree" />
-    <option name="LAST_COMMIT_MESSAGE" value="more and more and moreand moree" />
+    <MESSAGE value="more and more and moreand moreeeee" />
+    <option name="LAST_COMMIT_MESSAGE" value="more and more and moreand moreeeee" />
   </component>
 </project>

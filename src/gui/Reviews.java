@@ -21,6 +21,7 @@ public class Reviews extends JFrame {
     private static JLabel description;
     private static JLabel facilities;
     private static JLabel facilities2;
+    private static JLabel details;
     private static JLabel numOfReviews;
     private static JLabel avgScore;
     private static JButton close;
@@ -79,21 +80,13 @@ public class Reviews extends JFrame {
         panel.add(name);
         panel.add(kind);
         panel.add(description);
-        facilities2=new JLabel("Facilities: ");
-        /*panel.add(facilities2);
-        if(a.getFacilities()!=null) {
-            ArrayList<String> fac = new ArrayList<>();
-            fac = a.getFacilities().listOfSelectedFacilities();
-            if (fac != null) {
-                for (String s : fac) {
-                    facilities = new JLabel(s);
-                    panel.add(facilities);
-                }
-            } else {
-                facilities = new JLabel("None");
-                panel.add(facilities);
-            }
-        }*/
+        facilities2=new JLabel("Details");
+        panel.add(facilities2);
+        if(production instanceof Show) {
+            details = new JLabel(((Show) production).sdetails());
+            panel.add(details);
+        }
+
         numOfReviews=new JLabel("Number of reviews: "+String.valueOf(production.getReviews().size()));
         avgScore=new JLabel("Avg score: "+String.valueOf(production.averageScore()));
         panel.add(numOfReviews);

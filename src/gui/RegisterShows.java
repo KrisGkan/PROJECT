@@ -127,7 +127,7 @@ public class RegisterShows extends JFrame {
         add(episodeDurationField);
 
         addShowButton = new JButton("Add Show");
-        addShowButton.setBounds(300, 420, 140, 30);
+        addShowButton.setBounds(360, 420, 140, 30);
         add(addShowButton);
 
         addSeasonButton = new JButton("Add Season");

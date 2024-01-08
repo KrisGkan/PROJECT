@@ -3,6 +3,7 @@ package gui;
 import api.AdminSystem;
 import api.Movie;
 import api.Show;
+import api.UserSystem;
 
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -13,6 +14,7 @@ import java.awt.event.ActionListener;
 public class Productions extends JFrame {
 
     AdminSystem adminSystem;
+    UserSystem userSystem;
     private static JLabel totalReviews;
     private static JLabel totalAvgScore;
     private static JLabel title;
@@ -31,6 +33,9 @@ public class Productions extends JFrame {
 
     public Productions(AdminSystem adminSystem){
         this.adminSystem = adminSystem;
+    }
+    public Productions(UserSystem userSystem){
+        this.userSystem=userSystem;
     }
     //empty list
     public void emptyLabel(){
@@ -60,6 +65,7 @@ public class Productions extends JFrame {
 
         int k=0;
         //make and add labels on panels
+        if (userSystem==null){
         if(adminSystem.getDB().getMovies().size()!=0) {
             for (Movie a : adminSystem.getDB().getMovies()) {
                 k++;
@@ -123,7 +129,99 @@ public class Productions extends JFrame {
                 });
 
             }
-        }
+        }}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        if(adminSystem==null){
+        if(userSystem.getDB().getMovies().size()!=0) {
+            for (Movie a : userSystem.getDB().getMovies()) {
+                k++;
+                title = new JLabel("    " + a.getTitle());
+                descr = new JLabel("  " + a.getDescription());
+                if (a.getAppropriation()) suitable = new JLabel("Appropriate");
+                else suitable = new JLabel("Not Appropriate");
+                firstScreen = new JLabel("   "+a.getDateOfRelease());
+                kind = new JLabel(" "+a.getGenre());
+                dur = new JLabel("  "+ String.valueOf(a.getDuration()));
+                cast = new JLabel("  "+a.getCast());
+                avgScore = new JLabel("      Avg score: " + a.averageScore());
+                view=new JButton("view");
+
+                panel.add(title);
+                panel.add(descr);
+                panel.add(suitable);
+                panel.add(firstScreen);
+                panel.add(kind);
+                panel.add(dur);
+                panel.add(cast);
+                panel.add(avgScore);
+                panel.add(view);
+                view.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        Reviews r = new Reviews(a, userSystem);
+                        r.makeR();
+                    }
+                });
+            }
+        } if (userSystem.getDB().getShows().size()!=0) {
+            for (Show a : userSystem.getDB().getShows()) {
+                k++;
+                title = new JLabel("    " + a.getTitle());
+                descr = new JLabel("     " + a.getDescription());
+                if (a.getAppropriation()) suitable = new JLabel("Appropriate");
+                else suitable = new JLabel("Not Appropriate");
+                firstScreen = new JLabel("-");
+                dur = new JLabel(" - ");
+                kind = new JLabel("   "+a.getGenre());
+                cast = new JLabel("     " + a.getCast());
+                avgScore = new JLabel("       Avg score: " + a.averageScore());
+                view = new JButton("view");
+
+                panel.add(title);
+                panel.add(descr);
+                panel.add(suitable);
+                panel.add(firstScreen);
+                panel.add(kind);
+                panel.add(dur);
+                panel.add(cast);
+                panel.add(avgScore);
+                panel.add(view);
+                view.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        Reviews r = new Reviews(a, userSystem);
+                        r.makeR();
+                    }
+                });
+
+            }
+        }}
+
+
+
+
+
+
+
+
+
+
+
         if(k==0){emptyLabel();}
 
         //make close button and add on panel2

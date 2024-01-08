@@ -12,6 +12,9 @@ public class UserSystem {
       this.database = database;
     }
 
+    public Database getDB(){
+        return database;
+    }
     public User getUser(){
         return user;
     }

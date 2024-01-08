@@ -108,6 +108,7 @@ public class Login extends JFrame {
                           user = (User)person;
                           UserSystem userSystem = new UserSystem(user, database);
                           UserMenu userMenu = new UserMenu(database, userSystem);
+                          userMenu.makeUserMenu();
                       }
                   }
               }
