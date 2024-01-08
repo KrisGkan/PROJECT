@@ -5,7 +5,6 @@ import java.util.ArrayList;
 
 public class Show extends Production{
 
-    //ArrayList<Show> relatedShows;
     ArrayList<Season> seasons;
 
 

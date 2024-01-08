@@ -14,8 +14,7 @@ public class AdminMenu extends JFrame {
     Admin admin;
     private static JButton newM;
     private static JButton newS;
-    private static JButton editM;
-    private static JButton editS;
+    private static JButton production;
     private static JButton search;
     private static JButton logout;
     public AdminMenu(Admin admin, AdminSystem adminSystem){
@@ -42,10 +41,8 @@ public class AdminMenu extends JFrame {
       panel.add(newM);
       newS = new JButton("Add a show");
       panel.add(newS);
-      editM = new JButton("Edit Movies");
-      panel.add(editM);
-      editS = new JButton("Edit Shows");
-      panel.add(editS);
+      production = new JButton("Productions");
+      panel.add(production);
       search = new JButton("Search");
       panel.add(search);
       logout = new JButton("Logout");
@@ -67,20 +64,11 @@ public class AdminMenu extends JFrame {
           }
       });
 
-      editM.addActionListener(new ActionListener() {
+      production.addActionListener(new ActionListener() {
           @Override
           public void actionPerformed(ActionEvent e) {
-              EditMovies em = new EditMovies(adminSystem);
-              em.makeMovies();
-          }
-      });
-
-
-      editS.addActionListener(new ActionListener() {
-          @Override
-          public void actionPerformed(ActionEvent e) {
-            EditShows es = new EditShows(adminSystem);
-            es.makeShows();
+              Productions em = new Productions(adminSystem);
+              em.makeProductions();
           }
       });
 

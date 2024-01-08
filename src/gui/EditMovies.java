@@ -1,16 +1,17 @@
 package gui;
 
 import api.AdminSystem;
+import api.Movie;
 
 import javax.swing.*;
 
 public class EditMovies extends JFrame {
 
-    public EditMovies(AdminSystem adminSystem){
+    public EditMovies(Movie movie, AdminSystem adminSystem){
 
     }
 
-    public void makeMovies(){
+    public void makeMo(){
 
     }
 }

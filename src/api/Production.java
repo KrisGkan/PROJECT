@@ -65,4 +65,10 @@ public class Production implements Serializable {
     {
         return rating;
     }
+
+    public ArrayList<Review> getReviews(){
+        return reviews;
+    }
 }
+
+
