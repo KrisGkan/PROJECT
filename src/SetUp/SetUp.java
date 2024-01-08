@@ -179,6 +179,28 @@ public class SetUp {
         user2.addToFavorites(show4);
         user2.addToFavorites(movie2);
 
+        user1.addMyReviewed(movie1);
+        user1.addMyReviewed(movie2);
+        user1.addMyReviewed(movie3);
+        user1.addMyReviewed(movie4);
+        user1.addMyReviewed(movie5);
+        user2.addMyReviewed(movie1);
+        user2.addMyReviewed(movie2);
+        user2.addMyReviewed(movie3);
+        user2.addMyReviewed(movie4);
+        user2.addMyReviewed(movie5);
+
+        user1.addMyReviewed(show1);
+        user1.addMyReviewed(show2);
+        user1.addMyReviewed(show3);
+        user1.addMyReviewed(show4);
+        user1.addMyReviewed(show5);
+        user2.addMyReviewed(show1);
+        user2.addMyReviewed(show2);
+        user2.addMyReviewed(show3);
+        user2.addMyReviewed(show4);
+        user2.addMyReviewed(show5);
+
         database.addShow(show1);
         database.addShow(show2);
         database.addShow(show3);

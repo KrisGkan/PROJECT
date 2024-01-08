@@ -27,6 +27,7 @@ public class Reviews extends JFrame {
     private static JButton close;
     private static JButton edit;
     private static JButton delete;
+    private static JButton fave;
     private static JButton review;
     private static JLabel firstName;
     private static JLabel text;
@@ -138,31 +139,38 @@ public class Reviews extends JFrame {
         }
 
         //for users
-       /* if(adminSystem==null){
+       if(adminSystem==null){
             //add review button if user has not already made a review
-            if(!userSystem.getUser().getMyReviewed().contains(a)) {
+            if(!userSystem.getUser().getMyReviewed().contains(production)) {
+                fave = new JButton("Add to favorites");
                 review = new JButton("review");
+                panel.add(fave);
                 panel.add(review);
                 review.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        MakeReview mr = new MakeReview(userSystem, a);
+                        MakeReview mr = new MakeReview(userSystem, production);
                         mr.makeReview();
+                    }
+                });
+
+                fave.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        userSystem.getUser().addToFavorites(production);
                     }
                 });
             }
             //make labels for reviews
-            for(Review r:a.getListOfReviews()){
+            for(Review r:production.getReviews()){
                 firstName=new JLabel("* "+r.getFirstName()+": ");
                 text=new JLabel("   "+r.getText());
                 score=new JLabel("   Score: "+r.getScore());
-                date=new JLabel("   Date: "+r.getDate());
                 edit=new JButton("edit review");
                 delete=new JButton("delete review");
                 panel2.add(firstName);
                 panel2.add(text);
                 panel2.add(score);
-                panel2.add(date);
                 //compare based in username to place edit and delete buttons
                 if(r.getUser().getUsername().equals(userSystem.getUser().getUsername())) {
                     panel2.add(edit);
@@ -177,15 +185,15 @@ public class Reviews extends JFrame {
                     delete.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            userSystem.deleteReview(a,r);
+                            userSystem.deleteReview(production,r);
                             closeButton();
                         }
                     });
                 }
             }
             //if there is no review
-            if(a.getListOfReviews().size()==0)emptyLabel();
-        }*/
+            if(production.getReviews().size()==0)emptyLabel();
+        }
 
         //add close button
         close=new JButton("back");

@@ -131,21 +131,6 @@ public class Productions extends JFrame {
             }
         }}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         if(adminSystem==null){
         if(userSystem.getDB().getMovies().size()!=0) {
             for (Movie a : userSystem.getDB().getMovies()) {
@@ -211,15 +196,6 @@ public class Productions extends JFrame {
 
             }
         }}
-
-
-
-
-
-
-
-
-
 
 
         if(k==0){emptyLabel();}

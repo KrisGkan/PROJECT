@@ -25,7 +25,7 @@ public class UserMenu extends JFrame {
     }
 
     public void makeUserMenu(){
-        setTitle("Admin options");
+        setTitle("User options");
         setLocationRelativeTo(null);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         setSize(300,300);
@@ -58,6 +58,14 @@ public class UserMenu extends JFrame {
         logout.addActionListener(new ActionListener(){
             @Override
             public void actionPerformed(ActionEvent e) {closeButton();}
+        });
+
+        favorites.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Favorites f = new Favorites(userSystem);
+                f.makeF();
+            }
         });
 
         /*ActionListener listener = new ActionListener() {

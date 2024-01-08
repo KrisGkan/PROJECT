@@ -1,6 +1,7 @@
 package api;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 
 /**
  * Κλάση που υλοποιεί μία κριτική που κάνει ένας χρήστης για ένα κατάλυμα.
